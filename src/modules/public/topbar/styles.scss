@@ -1,0 +1,46 @@
+.headerTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+
+  cursor: pointer;
+  .header-icons {
+    font-size: 21px;
+    margin-left: 0.5rem;
+    transition: color 0.3s ease-in-out;
+    transform: translateY(3px);
+    color: black;
+    &:nth-child(2):hover {
+      fill: rgb(255, 0, 200); 
+    }
+
+    &:nth-child(3):hover {
+      color: rgb(42, 39, 255); 
+    }
+
+    &:nth-child(4):hover {
+      color: rgb(255, 0, 0); 
+    }
+    &:hover {
+      scale: 1.2;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .headerTop{
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

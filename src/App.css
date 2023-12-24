@@ -1,0 +1,28 @@
+.watsapp {
+  height: 2.5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 10px;
+  bottom: 5rem;
+  transition: 300ms ease-in-out;
+  z-index: 1;
+}
+.watsapp:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .watsapp {
+    height: 2rem;
+    bottom: 0.9rem;
+    left: 0.8rem;
+  }
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: row;
+}
+.admin-container .admin-inside {
+  width: 100%;
+}

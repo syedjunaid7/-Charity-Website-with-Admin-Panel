@@ -1,0 +1,339 @@
+button {
+  border-radius: 9rem;
+  padding: 0.7rem 1rem;
+  border-style: none;
+  color: #fff;
+  background: #068fff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  &:hover {
+    scale: 1.1;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+  }
+}
+.content-heading {
+  h2 {
+    font-weight: 400;
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  p {
+    margin-left: 2rem;
+    text-align: justify;
+    font-size: 20px;
+    color: #6d6d55;
+    font-weight: 400;
+    font-family: "Barlow", sans-serif;
+    line-height: 2;
+  }
+}
+@media (max-width: 700px) {
+  button {
+    font-size: 14px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  z-index: 1;
+}
+.blur-effect {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  background: rgba(121, 120, 120, 0.336);
+}
+
+// ADMIN Styles
+.inputMainBox {
+  margin: 0 3rem;
+  font-family: "Barlow", sans-serif !important;
+  margin-bottom: 3rem;
+  .admin-heading {
+    margin: 1rem 0;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  .inputBox {
+    max-width: -webkit-fill-available;
+    background-color: #f4f4f4;
+    margin-bottom: 2.5rem;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .title-dateBox {
+      display: flex;
+    }
+    .title-dateBox input[type="date"] {
+      width: 30% !important;
+      margin-left: 1rem;
+    }
+    width: 100%;
+    margin-bottom: 1.5rem;
+    p {
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-weight: bold;
+    }
+    input,
+    textarea {
+      width: -webkit-fill-available !important;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s ease-in-out;
+      margin-bottom: 1rem;
+      &:focus {
+        outline: none;
+        border-color: #6c63ff;
+      }
+    }
+    textarea {
+      height: 6rem;
+      resize: vertical;
+    }
+    .btn-div {
+      margin: 0 auto;
+      text-align: center;
+      button {
+        height: 2.2rem;
+        width: 12rem;
+        padding: 0 2rem;
+        border: none;
+        border-radius: 20px;
+        background-color: #6c63ff;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: normal;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        &:hover {
+          background-color: #564dff;
+        }
+        &:nth-child(2) {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  //  ----- Table Styles  -------
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    td {
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #ff6347; /* Adjust button color as needed */
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #d43f28; /* Adjust hover color as needed */
+        }
+      }
+    }
+    .td-content {
+      height: 7rem;
+      overflow: scroll;
+    }
+    .buttons-td {
+      display: flex;
+      justify-content: space-evenly;
+      transition: all 0.3s ease-in-out;
+      align-items: center;
+      gap: 1.5rem;
+      img {
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .checkbox-td {
+      /* Hide the default checkbox */
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        font-size: 1.5rem;
+        user-select: none;
+      }
+
+      /* Create a custom checkbox */
+      .checkmark {
+        --clr: #0b6e4f;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 1.3em;
+        width: 1.3em;
+        background-color: #ccc;
+        border-radius: 50%;
+        transition: 300ms;
+      }
+
+      /* When the checkbox is checked, add a blue background */
+      .container input:checked ~ .checkmark {
+        background-color: var(--clr);
+        border-radius: 0.5rem;
+        animation: pulse 500ms ease-in-out;
+      }
+
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      /* Show the checkmark when checked */
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      /* Style the checkmark/indicator */
+      .container .checkmark:after {
+        left: 0.45em;
+        top: 0.25em;
+        width: 0.25em;
+        height: 0.5em;
+        border: solid #e0e0e2;
+        border-width: 0 0.15em 0.15em 0;
+        transform: rotate(45deg);
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 #0b6e4f90;
+          rotate: 20deg;
+        }
+
+        50% {
+          rotate: -20deg;
+        }
+
+        75% {
+          box-shadow: 0 0 0 10px #0b6e4f60;
+        }
+
+        100% {
+          box-shadow: 0 0 0 13px #0b6e4f30;
+          rotate: 0;
+        }
+      }
+    }
+
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 300px) {
+      td {
+        display: block;
+        width: 100%;
+        text-align: right; /* Adjust alignment as needed */
+        button {
+          width: 100%;
+          margin-top: 8px;
+        }
+      }
+
+      th,
+      td {
+        padding: 8px;
+        font-size: 12px;
+      }
+
+      tbody tr {
+        display: block;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      tbody tr:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+//Delete List Confirmation Bos Style
+.cnfrm-del-container {
+  position: absolute;
+  display: none;
+}
+.open {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #0000;
+  backdrop-filter: blur(3px);
+  position: fixed;
+  .btn-box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    .btn-box-inside {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      background: #ffff;
+      padding: 3rem;
+      box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.153);
+      border-radius: 0.5rem;
+    }
+  }
+}

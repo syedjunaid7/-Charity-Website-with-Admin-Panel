@@ -1,0 +1,142 @@
+.hero-section {
+  .hero-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 7rem;
+    background: url(../../../assets/images/poster.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 63vh;
+  }
+  .content {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    padding: 1rem;
+    text-align: justify;
+    border-radius: 10px;
+    background: rgb(53 98 43 / 9%);
+    backdrop-filter: blur(7px);
+    color: #fff;
+    width: 25%;
+    &:hover {
+      cursor: pointer;
+      scale: 1.02;
+      transition: all 0.3s ease-out;
+    }
+    p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    button {
+      background: white;
+      font-size: 1rem;
+      font-family: "Cormorant Garamond", serif;
+      padding: 0px 4px;
+      color: black;
+    }
+  }
+  .content-more {
+    .icon {
+      position: relative;
+      font-size: 30px;
+      top: 2px;
+      background: white;
+      &:hover {
+        cursor: pointer;
+        scale: 1.2;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 85%;
+    top: 27px;
+    overflow: scroll;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    background: white;
+    padding: 1rem 2rem;
+    text-align: justify;
+    border-radius: 10px;
+    z-index: 1000;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+      color: black;
+      margin-bottom: 1rem;
+    }
+  }
+}
+@media (max-width: 1300px) {
+  .hero-inner {
+    align-items: center;
+  }
+}
+@media (max-width: 900px) {
+  .hero-section {
+    .hero-inner {
+      height: auto;
+      background-size: cover;
+    }
+    .content {
+      padding-bottom: 0;
+      padding-bottom: 0;
+      max-width: 100%;
+      width: auto;
+      P {
+        line-height: normal;
+      }
+    }
+  }
+  .hero-inner {
+    text-align: center;
+    h1 {
+      text-align: center;
+      font-size: 55px;
+      line-height: normal;
+    }
+    h2 {
+      text-align: center;
+    }
+    flex-direction: column;
+    padding: 0rem;
+    gap: 1rem !important;
+  }
+}
+@media (max-width: 350px) {
+  .hero-inner {
+    h1 {
+      font-size: 40px;
+    }
+    h2 {
+      font-size: 17px;
+    }
+    button {
+      margin: 17px auto;
+      width: 100%;
+    }
+    .content {
+      font-size: 30px;
+    }
+  }
+  .content-more {
+    padding: 1rem !important;
+    top: 35px !important;
+    height: 85dvh !important;
+  }
+  .hero-section {
+    .content {
+      P {
+        font-size: 24px;
+      }
+    }
+  }
+}
